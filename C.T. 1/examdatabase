@@ -1,0 +1,68 @@
+//a
+CREATE DATABASE IF NOT EXISTS examdb;
+
+//b
+CREATE TABLE employeetb(
+    id INT,
+    name VARCHAR(50),
+    department VARCHAR(3),
+    salary FLOAT(6,2),
+    hire_date DATE ,
+     PRIMARY KEY(id) );
+
+//c
+ALTER TABLE employeetb ADD COLUMN
+  position VARCHAR(50);
+
+//d
+ALTER TABLE employeetb MODIFY COLUMN name 
+   VARCHAR(100);
+
+//e
+CREATE TABLE projecttb(
+project_id INT,
+project_name VARCHAR(100),
+start_date DATE,
+end_date DATE,
+budget FLOAT(6,2),
+PRIMARY KEY(project_id) );
+ 
+//f
+INSERT INTO employeetb VALUES
+( 23,'Rahim','CSE',50000,'2024-11-11','Lecturer'),
+( 25,'Karim','EEE',75000,'2023-11-11','Lecturer'),
+( 27,'Asif','BBA',80000,'2021-07-01','Professor') ;
+
+//g
+INSERT INTO projecttb VALUES
+   (3511,'DBMS','2024-11-12','2024-12-30',60000),
+   (1221,'AOOP','2024-11-12','2024-12-30',70000),
+   (2555,'Software Engineering','2024-11-12','2024-12-30',100000);
+
+
+//h
+CREATE TABLE temptb(
+    temp_id INT,
+    temp_data VARCHAR(20) );
+
+//i
+INSERT INTO temptb VALUES 
+(1,'data 1'),
+(2,'data 2');
+
+//j
+TRUNCATE TABLE temptb;
+
+
+
+
+
+
+
+//k
+-- This is a Single Line Comment; 
+/*This is a Multi-line comment*/; 
+#This is a Hash/Author comment;
+
+//l
+DROP TABLE temptb;
