@@ -122,9 +122,11 @@ INSERT INTO temporarytb VALUES
 TRUNCATE TABLE temporarytb;
 
 //14
--- This is a Single Line Comment;
-/*This is a Multi-line comment*/;
-#This is a Hash/Author comment;
+-- This is a Single Line Comment
+/*
+This is a Multi-line comment
+*/
+#This is a Hash/Author comment
 
 //15
 DROP TABLE IF EXISTS temporarytb;
