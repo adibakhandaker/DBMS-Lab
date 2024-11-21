@@ -1,0 +1,130 @@
+//1
+CREATE DATABASE IF NOT EXISTS assignmentdatabase;
+
+//2
+DROP DATABASE IF EXISTS assignmentdatabase;
+CREATE DATABASE IF NOT EXISTS assignmentdb;
+
+//3
+CREATE TABLE teachertb (
+   id INT,
+  name VARCHAR(50),
+  department VARCHAR(3),
+  room_no VARCHAR(5),
+  date_of_birth DATE,
+  age  INT,
+  PRIMARY KEY(id) );
+
+//4
+ALTER TABLE teachertb ADD COLUMN
+( joining_date DATE,
+Total presence day INT);
+
+//5
+ALTER TABLE teachertb MODIFY COLUMN name
+VARCHAR(100);
+
+//6
+CREATE TABLE studenttb (
+   id INT,
+  name VARCHAR(100),
+  department VARCHAR(3),
+  cgpa FLOAT(3,2),
+  date_of_birth DATE,
+  credits_completed INT,
+   current trimester INT );
+  PRIMARY KEY(id) );
+
+//7
+ALTER TABLE teachertb DROP COLUMN age;
+
+//8
+ALTER TABLE teachertb CHANGE date_of_birth dob DATE;
+ALTER TABLE studenttb CHANGE date_of_birth dob DATE;
+
+//9
+INSERT INTO teachertb VALUES
+(1, 'Rahim', 'CSE', '735A', '1995-12-31', '2022-11-30', 56);
+INSERT INTO studenttb VALUES
+(85,’Adiba’,’CSE’,3.05,’2002-09-19’,49,6);
+
+//10
+INSERT INTO teachertb VALUES
+(2, 'Karim', 'CSE', '423', '1994-03-13', '2024-02-01', 60),
+(3, 'Fahim', 'BBA', '206', '1990-04-17', '2022-05-01', 150),
+(4, 'Jarin', 'EEE', '425', '1994-05-19', '2024-05-07', 44),
+(5, 'Akash', 'CSE', '808', '1992-03-13', '2023-02-01', 100),
+(6, 'Nila', 'EEE', '123', '1995-03-19', '2024-07-05', 40),
+(7, 'Asha', 'BBA', '219', '1995-03-13', '2024-06-02', 30),
+(8, 'Mahmud', 'EEE', '810', '1989-03-16', '2021-02-01', 200),
+(9, 'Nipa', 'CSE', '322', '1994-03-13', '2022-02-01', 50),
+(10, 'Nipa', 'CSE', '732', '1994-03-13', '2024-02-01', 80),
+(11, 'Nima', 'CSE', '423', '1996-03-14', '2020-02-01', 300),
+(12, 'Shakil', 'BBA', '636', '1992-03-12', '2024-02-01', 70),
+(13, 'Saad', 'CSE', '432', '1993-03-13', '2023-02-01', 90),
+(14, 'Rahat', 'CSE', '736', '1995-03-13', '2022-05-19', 120),
+(16, 'Aqif', 'BBA', '333', '1997-03-13', '2024-05-19', 40),
+(17, 'Rahat', 'CSE', '410', '1995-03-13', '2022-05-19', 120),
+(18, 'Hasan', 'EEE', '223', '1995-09-13', '2023-04-19', 90),
+(19, 'Isha', 'BBA', '435', '1995-03-13', '2023-05-19', 45),
+(20, 'Sirat', 'EEE', '823', '1992-03-13', '2019-05-30', 48),
+(21, 'Imam', 'BBA', '236', '1996-03-14', '2024-09-21', 20),
+(22, 'Rana', 'CSE', '336', '1996-03-13', '2021-05-30', 350),
+(23, 'Jisan', 'CSE', '736', '1995-03-13', '2022-02-28', 280),
+(24, 'Sara', 'CSE', '736', '1995-03-13', '2022-05-19', 250),
+(25, 'Rahat', 'BBA', '736', '1995-03-13', '2024-02-29', 60);
+
+INSERT INTO studenttb VALUES
+(9, 'Nila', 'BBA', 2.58, '2000-12-29', 138, 13),
+(10, 'Sima', 'CSE', 2.66, '2004-03-30', 19, 3),
+(11, 'Sadia', 'BBA', 2.50, '2000-04-28', 92, 9),
+(13, 'Ratul', 'BBA', 3.96, '2001-04-30', 80, 8),
+(15, 'Amit', 'EEE', 3.00, '2003-07-31', 77, 8),
+(18, 'Anika', 'EEE', 2.50, '2000-06-26', 135, 13),
+(22, 'Ahad', 'EEE', 4.00, '2004-03-29', 9, 2),
+(24, 'Laboni', 'CSE', 2.94, '2003-12-12', 70, 7),
+(26, 'Zihan', 'BBA', 2.92, '2003-01-11', 30, 3),
+(30, 'Usha', 'EEE', 3.00, '2002-02-12', 40, 6),
+(33, 'Abid', 'EEE', 3.53, '2000-01-26', 130, 14),
+(37, 'Fayez', 'CSE', 3.76, '2001-11-30', 130, 11),
+(39, 'Sifat', 'CSE', 3.66, '2002-04-13', 66, 7),
+(43, 'Karim', 'EEE', 2.79, '2000-12-31', 130, 11),
+(44, 'Siam', 'BBA', 3.00, '2002-03-10', 64, 8),
+(55, 'Bipro', 'EEE', 3.89, '2000-05-31', 130, 10),
+(57, 'Rahim', 'CSE', 3.30, '2001-01-01', 120, 10),
+(62, 'Shreya', 'CSE', 3.66, '2001-12-23', 49, 6),
+(78, 'Aqif', 'BBE', 2.27, '1999-02-28', 111, 16),
+(80, 'Sayem', 'EEE', 3.70, '2000-06-12', 126, 11),
+(84, 'Imon', 'CSE', 3.50, '2002-09-19', 49, 6),
+(88, 'Tanvir', 'CSE', 3.80, '2001-08-22', 130, 12),
+(98, 'Priom', 'BBA', 3.89, '2000-11-22', 126, 15),
+(143, 'Nisa', 'CSE', 2.99, '2004-04-01', 10, 2),
+(303, 'Zubair', 'CSE', 3.70, '2002-11-08', 49, 6);
+
+
+//11
+CREATE TABLE temporarytb (
+  tempdata_id int(11),
+  tempdate_content varchar(100) 
+)
+
+//12
+INSERT INTO temporarytb VALUES
+(1,’content1’),
+(2,’content2’),
+(3,’content3’),
+(4,’content4’),
+(5,’content5’);
+
+
+
+//13
+TRUNCATE TABLE temporarytb;
+
+//14
+-- This is a Single Line Comment;
+/*This is a Multi-line comment*/;
+#This is a Hash/Author comment;
+
+//15
+DROP TABLE IF EXISTS temporarytb;
