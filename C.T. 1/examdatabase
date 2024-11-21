@@ -60,9 +60,11 @@ TRUNCATE TABLE temptb;
 
 
 //k
--- This is a Single Line Comment; 
-/*This is a Multi-line comment*/; 
-#This is a Hash/Author comment;
+-- This is a Single Line Comment
+/*
+This is a Multi-line comment
+*/
+#This is a Hash/Author comment
 
 //l
 DROP TABLE temptb;
